@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Launching Flights</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .hero {
+      background: url('https://assets.onecompiler.app/43jy9vj5v/43jye4fnt/hoi.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .plane {
+      position: absolute;
+      width: 150px;
+      left: -200px;
+      top: 90%;
+      animation: flyDiagonal 8s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes flyDiagonal {
+      0% {
+        left: -200px;
+        top: 90%;
+        transform: rotate(-10deg);
+      }
+      50% {
+        transform: rotate(0deg) scale(1.05);
+      }
+      100% {
+        left: 100%;
+        top: 10%;
+        transform: rotate(10deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img src="https://assets.onecompiler.app/43jy9vj5v/43jye4fnt/GettyImages-1831200109-removebg-preview.png" alt="Flying Plane" class="plane" />
+  </div>
+</body>
+</html>
